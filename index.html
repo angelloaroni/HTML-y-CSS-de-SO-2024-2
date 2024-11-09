@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <div class="body-container">
+        <div class="header-container">
+            <h1>Página para conterizar en Sistemas Operativos | 2024-2</h1>
+        </div>
+        <img id = "logo" src="logoUlima.png">
+        <div class="integrantes-container"> 
+                <h2>Nombres de los integrantes del grupo: </h2>
+                <ol id="lista-nombres">
+                    <li = class="integrante">Aroni Yauri Hubert Angello</li>
+                    <li = class="integrante">Juan Loyola</li>
+                    <li = class="integrante">Sebastian arrieta</li>
+                    <li = class="integrante">Rodrigo Sandoval</li>
+                </ol>
+        </div>
+        <div class="Main-container">
+            <h2 id="Titulo-principal">Teoría sobre nuestro proyecto integrador</h2>
+            <h2>¿Que es la contenerizacion de aplicaciones?</h2>
+            <p>
+                La contenerización de aplicaciones se basa en “empaquetar” un software o una aplicación: Sin embargo, no solo es poner el ejecutable en una carpeta o juntar toda la aplicación en un solo archivo comprimido. Casi todas las aplicaciones funcionan con dependencias, es decir, programas ajenos a la aplicación, todo para funcionar correctamente, y si la misma aplicación se ejecuta en otra máquina sin esa dependencia, no funciona correctamente. La contenerización de aplicaciones junta todas las dependencias y configuraciones necesarias del sistema para que la aplicación funcione correctamente en cualquier entorno y sistema operativo. Es una herramienta antigua, pero que se popularizó en 2013 gracias al software Docker (IBM, s/f)
+            </p>
+            <strong><h2>Diferencias entre contenerizacion y virtualizacion</h2></strong>
+            <table>
+                <thead>
+                    <th>Virtualizacion</th>
+                    <th>Contenerizacion</th>    
+                </thead>
+                <tr>
+                    <td>La virtualización es una tecnología que permite la creación de múltiples ambientes simulados dedicados a partir de un sistema de hardware físico</td>
+                    <td>Es una técnica que permite empaquetar una aplicación y sus librerías en unidades llamadas “contenedores”. Estos deben ser ligeros y de disponibilidad fácil</td>  
+                </tr>
+                <tr>
+                    <td>Cada máquina virtual utiliza su propio sistema operativo, quiere decir que se pueden usar diferentes sistemas operativos y no uno solo</td>
+                    <td>Los contenedores comparten el mismo kernel del sistemas operativo</td>
+                </tr>
+                <tr>
+                    <td>Las máquinas virtuales son más pesadas, ya que simulan ser una computadora (GB)     </td>
+                    <td>Los contenedores son más ligeros y fácil acceso(MB)</td>
+                </tr>
+                <tr>
+                    <td>El consumo de recursos es más alto debido a los diferentes sistemas operativos que se pueden estar utilizando en una solo máquina</td>
+                    <td>Tiene un menor consumo de recursos lo que permite un mejor desarrollo y capacidad para ejecutar más aplicaciones en un mismo hardware</td>
+                </tr>
+                <tr>
+                    <td>La principal herramienta de las máquinas  virtuales es el Hypervisor que son los que se ejecuta directamente sobre el hardware</td>
+                    <td>La principal herramienta son los “Dockers” que son los que permiten crear, gestionar y modificar los contenedores</td>
+                </tr>
+            </table>
+            <strong><h2>beneficios de la contenerizacion</h2></strong>
+                <p>Los beneficios de la contenerizacion son:</p>
+                <ul>
+                    <li>Portabilidad: La contenerización permite la empaquetación de un programa con todos los requerimientos para que esté funciones independientemente del sistema operativo host , lo cual permite el uso de este programa empaquetado en diferentes dispositivos y sistemas operativos de una manera uniforme y consistente.</li>
+                    <li>Agilidad: Una de las ventajas que genera los contenedores cuando nos referimos al área de implementación de softwares , es la agilidad,  obtenida por la facilidad de compartir el programa, y que este no requiera nada más que el contenido del contenedor con el programa , lo cual al no requerir de ninguna modificación este proceso de pruebas,creación y compartición el programa no toma tiempo extra cómo se realizaría sin la aplicación de contenerización.</li>
+                    <li>Velocidad: Los contenedores no poseen un sistema operativo completo dentro de una instancia, no obstante , los contenedores comparten los núcleos del sistema operativo principal, esto permite que el contenedor se considere ligero y con una gran versatilidad en el uso de recursos, agilizando así un arranque más rápido y permitiendo una reducción de costos.</li>
+                    <li>Aislamiento de Fallos: Los contenedores se encuentran aislados del uno al otro, lo cual permite que si se genera un fallo en uno, este no afecte a los demás. Además permite la seguridad y gestión eficiente de los errores. Por otro lado, al ser independientemente de los otros contenedores, se puede abordar los problemas unitariamente sin comprometer la estabilidad y seguridad de los otros.</li>
+                    <li>Eficiencia: Los contenedores que se ejecutan en un ambiente contenerizado comparten núcleos del sistema operativo host y además  las capas de aplicación de un contenedor se pueden compartir entre contenedores , lo que permite que se puedan crear una gran cantidad de contenedores con la misma capacidad de una máquina virtual sin afectar el rendimiento.</li>
+                    <li>Facilidad de Gestión: La contenerización se puede volver aún más poderosa si esta es combinada con plataformas de orquestación de contenedores, como en este caso kubernetes, la cual automatiza y simplifica muchos procesos que serían complejos y laboriosos.</li>
+                    <li>Seguridad: Como se ha mencionado, su independencia con respecto a otros contenerizaciones que se ejecutan a la vez en un mismo entorno permite que los códigos maliciosos que se ejecutan en uno , no afecte a los demás. Por otro lado, se tiene la capacidad de bloquear las entradas que el usuario requiera para una mayor seguridad.</li>
+                </ul>
+            <strong><h2>limitaciones de la contenerizacion</h2></strong>
+                <p>Algunas de las limitaciones que presenta la conte son:</p>
+                <ul>
+                    <li>Seguridad:  El uso de una infraestructura compartida implica mejoras en la eficiencia y utilización de hardware. Sin embargo, este mismo enfoque presenta problemas adicionales de seguridad significativos. A diferencia de una máquina virtual, un contenedor no está completamente aislado, puesto que comparten el kernel del sistema operativo del host, por lo que un fallo de seguridad en este, afectaría a todos los contenedores que dependan de él.</li>
+                    <li>Organización: Cuando se trabaja con máquinas virtuales, usualmente se utiliza un hipervisor que permite organizar fácilmente la gestión de las mismas, VMware, por ejemplo. En el caso de los contenedores, esto es un poco más complicado, ya que hay muchas más variedad de alternativas, cada una con sus propias limitaciones y ventajas, por lo que puede ser tedioso tener que elegir un organizador específico dependiendo de las necesidades del usuario o del proyecto.</li>
+                    <li>Persistencia de los datos: La persistencia de datos en máquinas virtuales suele ser mucho más sencilla, en el caso de los contenedores, al estar pensados para ser temporales, es necesario que la información que quiera ser almacenada, se encuentre en algún lugar que resguarde archivos de manera permanente, como bases de datos o sistemas de archivos distribuidos, puesto que los reinicios de los contenedores pueden llevar a pérdidas de información.</li>
+                </ul>
+            <strong><h2>Casos de uso típicos</h2></strong>
+                <p>El uso de contenedores se ha convertido en una práctica popular en el desarrollo de software, alguno de sus casos de uso típico son los siguientes:</p>
+                <ul>
+                    <li>Microservicios: Los microservicios descomponen una aplicación en servicios mucho más pequeños, en este contexto, los contenedores al ser justamente ligeros y portátiles, son ideales para el desarrollo de estos, de esta forma era cada microservicio puede ser desarrollado y desplegado de manera independiente evitando interferencias entre ellos, mejorando y facilitando el mantenimiento o las actualizaciones del proyecto.</li>
+                    <li>Desarrollo y prueba de aplicaciones en general: El uso de contenedores puede ayudar a los desarrolladores de software a crear entornos más consistentes, permitiendo ejecutar  el proyecto terminado o hacer pruebas del mismo en diferentes entornos sin necesidad de instalar manualmente todas las dependencias necesarias, lo que en general agiliza el avance del proyecto.</li>
+                    <li>Despliegue en la nube: Al momento de querer desplegar una aplicación en la nube, los contenedores son una opción muy utilizada, ya que permiten empaquetar la aplicación, sus dependencias y las configuraciones que necesita para funcionar. Esto asegura que se pueda cargar en diferentes tipos de servicio de nube sin la necesidad de realizar mayores cambios en el código o en la estructura del programa,</li>
+                </ul>
+
+            
+            
+        </div>
+
+    </div>
+</body>
+</html>
